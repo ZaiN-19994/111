@@ -6,27 +6,24 @@
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
 
   <script>
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-    }
+    const ref = document.referrer;
+    const allowedReferrers = [
+      "https://zain-19994.github.io/-1/",
+      "https://zain-19994.github.io/-1",
+      "https://1122-c3m.pages.dev/"
+    ];
 
-    const accessToken = getCookie("access_token");
-    console.log("الزائر جاي من:", document.referrer);
-    console.log("قيمة access_token:", accessToken);
+    const isReferrerAllowed = allowedReferrers.some(url => ref.startsWith(url));
 
-    if (accessToken !== "allowed") {
-        console.log("🚫 توكن غير صحيح.. هيتحول كمان شوية");
-        setTimeout(() => {
-            window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-        }, 999000); // 3 ثواني
+    if (!isReferrerAllowed) {
+      console.log("🚫 المرجع غير مصرح بيه.. هيتم التحويل خلال ثواني");
+      setTimeout(() => {
+        window.location.replace("https://4e78d667.bgwp1.pages.dev/");
+      }, 99000); // مهلة 3 ثواني قبل التحويل
     } else {
-        console.log("✅ الوصول مسموح. الكوكي صحيح.");
-        // حذف الكوكي بعد التحقق منه
-        document.cookie = "access_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      console.log("✅ المرجع مسموح، كمل في الصفحة.");
     }
-</script>
+  </script>
 
 
   <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
