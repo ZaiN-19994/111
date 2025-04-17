@@ -6,11 +6,12 @@
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
 
   <script>
-  const urlParams = new URLSearchParams(window.location.search);
-const source = urlParams.get('source');
+const accessToken = localStorage.getItem("access_token");
 
-if (source !== "allowed") {
-  window.location.replace("https://4e78d667.bgwp1.pages.dev/");
+if (accessToken !== "allowed") {
+    window.location.replace("https://4e78d667.bgwp1.pages.dev/");
+} else {
+    localStorage.removeItem("access_token");
 }
 </script>
 
