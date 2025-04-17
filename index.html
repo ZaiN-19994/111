@@ -6,11 +6,21 @@
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
 
   <script>
-const accessToken = localStorage.getItem("access_token");
+window.addEventListener("message", (event) => {
+    // التحقق من مصدر الرسالة (Origin)
+    if (event.origin !== "https://zain-19994.github.io") {
+        console.log("مصدر غير مصرح به");
+        return;
+    }
 
-if (accessToken !== "allowed") {
-    window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-}
+    // التحقق من محتوى الرسالة
+    if (event.data === "allowed") {
+        console.log("الوصول مسموح");
+    } else {
+        // إذا الرسالة غير صحيحة، احول المستخدم للرابط البديل
+        window.location.replace("https://4e78d667.bgwp1.pages.dev/");
+    }
+});
 </script>
 
   <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
