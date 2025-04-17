@@ -16,12 +16,13 @@
     const isReferrerAllowed = allowedReferrers.some(url => ref.startsWith(url));
 
     if (!isReferrerAllowed) {
-      console.log("🚫 المرجع غير مصرح بيه.. هيتم التحويل خلال ثواني");
-      setTimeout(() => {
-        window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-      } else {
-      console.log("✅ المرجع مسموح، كمل في الصفحة.");
-    }
+  console.log("🚫 المرجع غير مصرح بيه.. هيتم التحويل خلال ثواني");
+  setTimeout(() => {
+    window.location.replace("https://4e78d667.bgwp1.pages.dev/");
+  }, 3000);
+} else {
+  console.log("✅ المرجع مسموح، كمل في الصفحة.");
+}
   </script>
 
 
