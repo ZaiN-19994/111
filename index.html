@@ -6,32 +6,23 @@
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
 
   <script>
-    let isAllowed = false;
+    function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
 
-    window.addEventListener("message", (event) => {
-        // التحقق من مصدر الرسالة (Origin)
-        if (event.origin !== "https://112-2vl.pages.dev/") {
-            console.log("مصدر غير مصرح به");
-            return;
-        }
+// التحقق من وجود الكوكي
+const accessToken = getCookie("access_token");
 
-        // التحقق من محتوى الرسالة
-        if (event.data === "allowed") {
-            console.log("الوصول مسموح");
-            isAllowed = true;
-        } else {
-            // إذا الرسالة غير صحيحة، احول المستخدم للرابط البديل
-            window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-        }
-    });
-
-    // التحقق من أن المستخدم تلقى رسالة صحيحة قبل السماح له بالدخول
-    setTimeout(() => {
-        if (!isAllowed) {
-            console.log("لم يتم تلقي رسالة الوصول الصحيحة");
-            window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-        }
-    }, 1000); // انتظر ثانية واحدة لضمان وصول الرسالة
+if (accessToken !== "allowed") {
+    console.log("كوكي غير صحيح أو غير موجود. تحويل المستخدم...");
+    window.location.replace("https://4e78d667.bgwp1.pages.dev/");
+} else {
+    console.log("الوصول مسموح. الكوكي صحيح.");
+    // حذف الكوكي بعد التحقق منه
+    document.cookie = "access_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+}
 </script>
 
   <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
