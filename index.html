@@ -11,8 +11,14 @@
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.key === 'u') return false;
   };
+ const allowedReferrer = "https://zain-19994.github.io/-1/";
 
-  jwplayer("vplayer").setup({
+  /*if (document.referrer !== allowedReferrer && localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "https://i.giphy.com/YwCbGTL2dKWpMH5VMr.webp";
+  } */
+  else {
+    var _0x1 = jwplayer;
+    _0x1("vplayer").setup({
       sources: [{
         file:"https://master.c.scdns.io/stream/v2/SWLbfMbrlQTYuPBvHPwzBg/1744922156/normal/0/41.36.62.143/no/01d7b660408b6eae4cd057a54d3685e2/web184.faselhd.cafe/master.m3u8",
         label:"480p"
