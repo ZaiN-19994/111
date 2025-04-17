@@ -2,9 +2,22 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>🔹🪄🔹 صفحة حماية</title>
+  <title>🔹🪄🔹 || مسلسل Blind (2022) - الحلقة 1</title>
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
-  
+
+  <script>/*
+    const allowedReferrers = [
+      "https://zain-19994.github.io/-1",
+      "https://zain-19994.github.io/-1/"
+    ];
+
+    const ref = document.referrer;
+
+    if (!allowedReferrers.includes(ref)) {
+      window.location.replace("https://zain-19994.github.io/-/lo.html");
+    } */
+  </script>
+
   <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
   <style>
     html, body {
@@ -37,23 +50,25 @@
       z-index: 1;
     }
   </style>
-  <script>
+</head>
+<body>
+  <div class="container">
+    <img class="poster" src="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" alt="بوستر الفيلم">
+    <div id="vplayer"></div>
+  </div>
+
+<script>
   document.addEventListener('contextmenu', event => event.preventDefault());
   document.onkeydown = function(e) {
     if (e.keyCode == 123) return false;
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.key === 'u') return false;
   };
- const allowedReferrer = "https://zain-19994.github.io/-1/";
 
-  /*if (document.referrer !== allowedReferrer && localStorage.getItem("loggedIn") !== "true") {
-    window.location.href = "https://i.giphy.com/YwCbGTL2dKWpMH5VMr.webp";
-  } */
-  else {
-    var _0x1 = jwplayer;
-    _0x1("vplayer").setup({
+  var _0x1 = jwplayer;
+  _0x1("vplayer").setup({
       sources: [{
-        file:"https://master.c.scdns.io/stream/v2/SWLbfMbrlQTYuPBvHPwzBg/1744922156/normal/0/41.36.62.143/no/01d7b660408b6eae4cd057a54d3685e2/web184.faselhd.cafe/master.m3u8",
+        file:"https://1.muchasgraciask.live/hls/1/stream-fZW9_iJNgz-866.ts",
         label:"480p"
       }],
       image: "",
@@ -79,11 +94,5 @@
       playbackRates: [0.5, 1, 2, 3]
   });
 </script>
-</head>
-<body>
-  <div class="container">
-    <img class="poster" src="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" alt="بوستر الفيلم">
-    <div id="vplayer"></div>
-  </div>
 </body>
 </html>
