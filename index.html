@@ -2,20 +2,16 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>111</title>
+  <title>🔹🪄🔹 صفحة حماية</title>
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
 
   <script>
-    const allowedReferrers = [
-      "https://dash.cloudflare.com/ff6c7a4efa6ec8631aba6d7757639818/pages/view/111",
-      "https://dash.cloudflare.com/ff6c7a4efa6ec8631aba6d7757639818/pages/view/111/"
-    ];
-
     const ref = document.referrer;
+    const allowedReferrer = "https://dash.cloudflare.com/ff6c7a4efa6ec8631aba6d7757639818/pages/view/111";
 
-    if (!allowedReferrers.includes(ref)) {
+    if (ref !== allowedReferrer) {
       window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-    } 
+    }
   </script>
 
   <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
@@ -65,8 +61,7 @@
     if (e.ctrlKey && e.key === 'u') return false;
   };
 
-  var _0x1 = jwplayer;
-  _0x1("vplayer").setup({
+  jwplayer("vplayer").setup({
       sources: [{
         file:"https://master.c.scdns.io/stream/v2/xnCKtknSErEmvXOLrm6pDw/1744897399/normal/0/41.36.62.143/no/01d7b660408b6eae4cd057a54d3685e2/web184.faselhd.cafe/master.m3u8",
         label:"480p"
