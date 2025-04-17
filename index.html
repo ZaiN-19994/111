@@ -6,26 +6,22 @@
   <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BNTQ3Mzk5ZmYtMzExZS00Yjg3LWI4NjMtZjcwZGE5NjFjYjQyXkEyXkFqcGc@._V1_.jpg" />
 
   <script>
-    const ref = document.referrer;
-    const allowedReferrers = [
-      "https://zain-19994.github.io/-1/",
-      "https://zain-19994.github.io/-1",
-      "https://1122-c3m.pages.dev/"
-    ];
+  const ref = document.referrer;
+  const allowedReferrers = [
+    "https://zain-19994.github.io/-1/",
+    "https://zain-19994.github.io/-1",
+    "https://1122-c3m.pages.dev/"
+  ];
 
-    const isReferrerAllowed = allowedReferrers.some(url => ref.startsWith(url));
+  const isReferrerAllowed = allowedReferrers.some(url => ref.startsWith(url));
 
-    if (!isReferrerAllowed) {
-  console.log("🚫 المرجع غير مصرح بيه.. هيتم التحويل خلال ثواني");
-  setTimeout(() => {
+  if (!isReferrerAllowed) {
+    console.log("🚫 المرجع غير مصرح بيه.. هيتم التحويل فورًا");
     window.location.replace("https://4e78d667.bgwp1.pages.dev/");
-  }, 3000);
-} else {
-  console.log("✅ المرجع مسموح، كمل في الصفحة.");
-}
-  </script>
-
-
+  } else {
+    console.log("✅ المرجع مسموح، كمل في الصفحة.");
+  }
+</script>
   <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
   <style>
     html, body {
